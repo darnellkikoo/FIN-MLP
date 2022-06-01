@@ -7,8 +7,7 @@ import time
 with open("./resources/model.pickle", 'rb') as file:
     model = pkl.load(file)
 
-st.title("Mau deploy jadi web katanya")
-
+# Accepting Inputs
 with st.sidebar:
     # Categories
     gender = st.selectbox("What's your gender?", options=["Male", "Female"])
@@ -37,14 +36,15 @@ with st.sidebar:
     dep_delay = st.number_input("Departure Delay in minutes", min_value = 0)
     arr_delay = st.number_input("Arrival Delay in minutes", min_value = 0)
 
-df = DataFrame([{
-    'Gender':gender,
+# Converting input into the DataFrame
+df = DataFrame({
+    'Gender':[gender, 'Male' if gender == 'Female' else 'Female'],
     'Customer Type':customer_type,
     'Age':age,
-    'Type of Travel':travel_type,
+    'Type of Travel':[travel_type, 'Business travel' if travel_type == 'Personal Travel' else 'Personal Travel'],
     'Class':travel_class,
     'Flight Distance':flight_distance,
-    'Inflight wifi service': wifi,
+    'Inflight wifi service': wifi,          
     'Departure/Arrival time convenient':dep_arr,
     'Ease of Online booking':online_book,
     'Gate location':gate_loc,
@@ -60,15 +60,19 @@ df = DataFrame([{
     'Cleanliness':cleanliness,
     'Departure Delay in Minutes': dep_delay,
     'Arrival Delay in Minutes':arr_delay
-}])
+})
 
-st.dataframe(df)
+# Main Page
+st.title("Mau deploy jadi web katanya")
+st.dataframe(df.iloc[[0]])
 if st.button("Predict"):
     progress_bar = st.progress(0)
     for i in range(100):
         time.sleep(0.01)
         progress_bar.progress(i+1)
     df = preprocess_data(df)
-    st.dataframe(df)
-    # result = model.predict(df)
-    # st.success(result)
+    result = bool(model.predict(df))
+    if result:
+        st.success("Customer is satisfied!!")
+    else:
+        st.error("Customer is unsatisfied!")
