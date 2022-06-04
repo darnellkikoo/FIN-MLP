@@ -29,3 +29,4 @@ def preprocess_data(df):
         df[col] = df[col].map(ordinal_map.get(col))
     # Return only the first row
     return df.iloc[[0]]
+

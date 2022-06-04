@@ -16,3 +16,4 @@ def run_app():
     model = load_model()    
     df = prompt()
     home(df, model)
+

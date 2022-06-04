@@ -45,3 +45,4 @@ def display_statistics():
     r2.metric("Wrong predictions", no)
     accuracy = (yes*100)/(yes+no) if yes+no!=0 else 100
     r3.metric("Accuracy", f"{accuracy}%")
+

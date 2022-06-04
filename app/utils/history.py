@@ -18,3 +18,4 @@ def add_review(result:bool):
         history['no'] = int(history.get('no'))+1
     with open("./resources/json/history.json", 'w') as fp:
         json.dump(history, fp)
+
