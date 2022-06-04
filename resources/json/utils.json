@@ -1,0 +1,45 @@
+{
+    "help":{
+        "gender":"What is your sex?",
+        "customer_type":"Are you a Loyal Customer?",
+        "travel_type":"Are you in this flight for business or personal reasons?",
+        "travel_class":"What flight class are you in?",
+        "age":"Insert your age!",
+        "distance":"Insert the distance of your flight (in km)",
+        "wifi":"This input measures how satisfied you are with our inflight wifi service. Choose 0 if there was no inflight wifi service, pick between 1 and 5 to rate the internet speed (from bad to very good)",
+        "dep_arr":"This input measures how satisfied you are with our departure/arrival time. Choose between 0 and 5 to rate the departure/arrival time (from very late to on time)",
+        "booking":"This input measures how satisfied you are with our online booking feature. Choose 0 if there was no online booking service/You didn't book online, pick from 1 to 5 to rate your satisfaction when booking online",
+        "gate":"This input measures how satisfied you are with our gate location. Choose between 0 and 5 to rate our gate location (from very unsatisfactory to very satisfied)",
+        "fnb":"This input measures how satisfied you are with our food and drinks. Choose 0 if we didn't provide any food/beverages, pick between 1 and 5 to rate our food/drinks (from tasteless to delicious according to flight standards)",
+        "online_boarding":"This input measures how satisfied you are with the online boarding process.Choose 0 if there was no online boarding service/You didn't use online boarding, pick from 1 to 5 to rate your satisfaction when boarding online",
+        "seat":"This input measures how satisfied you are with our seats. Choose between 0 and 5 to rate our seats (from very uncomfortable to very comfortable)",
+        "entertainment":"This input measures how satisfied you are with our inflight entertainment (movies, tv-series, music, games, toys, magazines, etc.). Choose 0 if we didn't provide any entertainment, pick between 1 and 5 to rate our inflight entertainment (from boring to fun)",
+        "onboard_service":"This input measures how satisfied you are with our on-board services (our facilities in general). Choose between 0 and 5 to rate our on-board services (from very unsatisfied to very satisfied)",
+        "leg":"This input measures how satisfied you are with our leg room service. Leg room is the amount of space available for your legs when you are sitting behind another seat. Choose between 0 and 5 to rate our leg room services (from very unsatisfactory to very satisfied)",
+        "baggage":"This input measures how satisfied you are with our baggage handling. Rate us from 0 to 5 (from \"my things broke\" to \"they are all in perfect condition\")",
+        "check_in":"This input measures how satisfied you are with the check in process. Choose between 0 and 5 to rate the check in process!",
+        "service":"This input measures how satisfied you are with our inflight services (Our staffs). Rate our employees from 0 to 5",
+        "clean":"This input measures how satisfied you are of our cleanliness. Choose between 0 and 5 to rate the cleanliness (from dirty to spotless)",
+        "dep_delay":"Insert the amount of minutes of delay during your departure",
+        "arr_delay":"Insert the amount of minutes of delay during your arrival"    
+    },
+    "case":{
+        "customer_type":{
+            "Loyal Customer":"Loyal Customer",
+            "Disloyal Customer":"disloyal Customer"
+        },
+        "travel_type":{
+            "Business Travel":"Business travel",
+            "Personal Travel":"Personal Travel"
+        }
+    },
+    "problem":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt ut sapien sed bibendum. Suspendisse hendrerit nisl quis sem vehicula, sed lacinia augue aliquet. Sed facilisis mauris et mollis vestibulum. Donec rutrum dui non nulla lacinia, a tincidunt dui dictum. Duis vehicula odio id elit pharetra mollis. Nunc auctor, mauris hendrerit fermentum porttitor, eros nulla mollis eros, ut sodales justo augue at lorem. Vivamus eleifend dictum lorem at pretium. Ut molestie rutrum sem nec semper. Nunc ac dapibus dui, quis rutrum neque. Mauris commodo fringilla finibus. Nulla quis lacinia est. Curabitur a libero eu diam viverra interdum. Mauris in libero.",
+    "satisfaction": {
+        "0":"Not applicable",
+        "1":"Very unsatisfied",
+        "2":"Unsatisfied",
+        "3":"Normal",
+        "4":"Satisfied",
+        "5":"Very satisfied"
+    }
+}
