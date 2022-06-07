@@ -14,11 +14,11 @@
         "online_boarding":"This input measures how satisfied you are with the online boarding process.Choose 0 if there was no online boarding service/You didn't use online boarding, pick from 1 to 5 to rate your satisfaction when boarding online",
         "seat":"This input measures how satisfied you are with our seats. Choose between 0 and 5 to rate our seats (from very uncomfortable to very comfortable)",
         "entertainment":"This input measures how satisfied you are with our inflight entertainment (movies, tv-series, music, games, toys, magazines, etc.). Choose 0 if we didn't provide any entertainment, pick between 1 and 5 to rate our inflight entertainment (from boring to fun)",
-        "onboard_service":"This input measures how satisfied you are with our on-board services (our facilities in general). Choose between 0 and 5 to rate our on-board services (from very unsatisfied to very satisfied)",
+        "onboard_service":"This input measures how satisfied you are with our on-board services (when boarding the airplane). Choose between 0 and 5 to rate our on-board services (from very unsatisfied to very satisfied)",
         "leg":"This input measures how satisfied you are with our leg room service. Leg room is the amount of space available for your legs when you are sitting behind another seat. Choose between 0 and 5 to rate our leg room services (from very unsatisfactory to very satisfied)",
         "baggage":"This input measures how satisfied you are with our baggage handling. Rate us from 0 to 5 (from \"my things broke\" to \"they are all in perfect condition\")",
         "check_in":"This input measures how satisfied you are with the check in process. Choose between 0 and 5 to rate the check in process!",
-        "service":"This input measures how satisfied you are with our inflight services (Our staffs). Rate our employees from 0 to 5",
+        "service":"This input measures how satisfied you are with our inflight services (during the flight). Rate our inflight services from 0 to 5",
         "clean":"This input measures how satisfied you are of our cleanliness. Choose between 0 and 5 to rate the cleanliness (from dirty to spotless)",
         "dep_delay":"Insert the amount of minutes of delay during your departure",
         "arr_delay":"Insert the amount of minutes of delay during your arrival"    

@@ -24,10 +24,10 @@ def display_data(df):
     col1, col2 = st.columns(2)
     col1.metric("Passenger information", f"{int(df['Age'])} year old {str(df['Gender'])}")
     col2.metric("Customer type", str(df['Customer Type']).capitalize())
-    f1, f2, f3 = st.columns([2,1,1])
+    f1, f2, f3 = st.columns([2,2,1])
     f1.metric("Flight type", str(df['Type of Travel']).capitalize())
     f2.metric("Flight class", f"{str(df['Class']).capitalize()} class")
-    f3.metric("Flight distance", f"{float(df['Flight Distance'])} km")  
+    f3.metric("Flight distance (in km)", f"{int(df['Flight Distance'])}")  
     map_satisfaction = lambda x:satisfaction_details.get(str(x))
     for col in table_columns:
         df[col] = map_satisfaction(int(df[col]))
@@ -43,6 +43,6 @@ def display_statistics():
     yes, no = reviews.get('yes'), reviews.get('no')
     r1.metric("Right predictions", yes)
     r2.metric("Wrong predictions", no)
-    accuracy = (yes*100)/(yes+no) if yes+no!=0 else 100
+    accuracy = round((yes*100)/(yes+no),2) if yes+no!=0 else 100
     r3.metric("Accuracy", f"{accuracy}%")
 
