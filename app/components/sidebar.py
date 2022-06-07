@@ -26,7 +26,7 @@ def prompt():
     onboard_service = st.sidebar.slider("On-board Service", min_value=0, max_value=5, value=3, help=help_details.get('onboard_service'))
     leg = st.sidebar.slider("Leg Room Service", min_value=0, max_value=5, value=3, help=help_details.get('leg'))
     baggage = st.sidebar.slider("Baggage Handling", min_value=0, max_value=5, value=3, help=help_details.get('baggage'))
-    check_in = st.sidebar.slider("Check-in Service", min_value=0, max_value=5, value=3, help=help_details.get('checkin'))
+    check_in = st.sidebar.slider("Check-in Service", min_value=0, max_value=5, value=3, help=help_details.get('check_in'))
     service = st.sidebar.slider("Inflight services", min_value=0, max_value=5, value=3, help=help_details.get('service'))
     clean = st.sidebar.slider("Cleanliness", min_value=0, max_value=5, value=3, help=help_details.get('clean'))
     # Delays
