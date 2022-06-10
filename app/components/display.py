@@ -36,6 +36,9 @@ def display_data(df):
         ss = st.columns([len(col[0]), len(col[1])])
         for s,c in zip(ss,col): 
             s.dataframe(df[c])
+    d1, d2 = st.columns(2)
+    d1.metric("Departure Delay (in min)", f"{int(df['Departure Delay in Minutes'])}")
+    d2.metric("Arrival Delay (in min)", f"{int(df['Arrival Delay in Minutes'])}")
             
 def display_statistics():
     reviews = get_review()
