@@ -28,6 +28,9 @@ def display_data(df):
     f1.metric("Flight type", str(df['Type of Travel']).capitalize())
     f2.metric("Flight class", f"{str(df['Class']).capitalize()} class")
     f3.metric("Flight distance (in km)", f"{int(df['Flight Distance'])}")  
+    d, d1, d2, e = st.columns([1,2,2,1])
+    d1.metric("Departure Delay (in min)", f"{int(df['Departure Delay in Minutes'])}")
+    d2.metric("Arrival Delay (in min)", f"{int(df['Arrival Delay in Minutes'])}")
     map_satisfaction = lambda x:satisfaction_details.get(str(x))
     for col in table_columns:
         df[col] = map_satisfaction(int(df[col]))
@@ -36,9 +39,6 @@ def display_data(df):
         ss = st.columns([len(col[0]), len(col[1])])
         for s,c in zip(ss,col): 
             s.dataframe(df[c])
-    d, d1, d2, e = st.columns([1,2,2,1])
-    d1.metric("Departure Delay (in min)", f"{int(df['Departure Delay in Minutes'])}")
-    d2.metric("Arrival Delay (in min)", f"{int(df['Arrival Delay in Minutes'])}")
             
 def display_statistics():
     reviews = get_review()
