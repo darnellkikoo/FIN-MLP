@@ -13,6 +13,7 @@ def run_app():
         page_title='Flight Passenger Satisfaction',
         page_icon='✈️'
     )
+    st.markdown("<style>#MainMenu{visibility:hidden;}</style>", unsafe_allow_html=True)
     model = load_model()    
     df = prompt()
     home(df, model)

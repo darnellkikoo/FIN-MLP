@@ -1,21 +1,24 @@
-import json 
+from dotenv import load_dotenv
+from os import getenv
+from pymongo import MongoClient
+
+load_dotenv()
+
+def get_collection():
+    client = MongoClient(getenv('DATABASE_CONNECTION'))
+    db = client['COMP67450001']
+    return db['flight-satisfaction']
 
 def get_review():
-    try:
-        with open("./resources/json/history.json") as file:
-            history = json.load(file)
-    except FileNotFoundError:
-        with open("./resources/json/history.json",'w') as file:
-            history = {"yes":0,"no":0}
-            json.dump(history, file)
-    return history
+    collection = get_collection()
+    return collection.find_one({'name':'history'})
 
 def add_review(result:bool):
+    collection = get_collection()
     history = get_review()
     if result: 
-        history['yes'] = int(history.get('yes'))+1
+        collection.update_one({'_id':history.get('_id')}, {'$inc':{'yes':history.get('yes')+1}})
     else:
-        history['no'] = int(history.get('no'))+1
-    with open("./resources/json/history.json", 'w') as fp:
-        json.dump(history, fp)
+        collection.update_one({'_id':history.get('_id')}, {'$inc':{'no':history.get('no')+1}})
+    
 
