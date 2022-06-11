@@ -1,6 +1,6 @@
 import json
 
-with open("./resources/json/utils.json") as json_file:
+with open("./resources/utils.json") as json_file:
     input_helper = json.load(json_file)
     help_details = input_helper.get('help')
     case_details = input_helper.get('case')
