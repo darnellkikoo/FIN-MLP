@@ -21,4 +21,3 @@ def add_review(result:bool):
     else:
         collection.update_one({'_id':history.get('_id')}, {'$inc':{'no':history.get('no')+1}})
     
-
