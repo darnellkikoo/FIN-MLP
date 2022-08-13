@@ -32,4 +32,4 @@
 
 5. Run the web application by typing ```streamlit run main.py```
 
-Deployed Weebsite ![Click Here](https://flight-satisfaction.herokuapp.com/)
+<b>Deployed Website [Click Here](https://flight-satisfaction.herokuapp.com/)<b>
