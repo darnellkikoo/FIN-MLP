@@ -31,3 +31,5 @@
 4. Move to the Python (env) terminal install all requirements by typing ``` pip install -r requirements.txt```
 
 5. Run the web application by typing ```streamlit run main.py```
+
+Deployed Weebsite ![Click Here](https://flight-satisfaction.herokuapp.com/)
