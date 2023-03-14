@@ -17,7 +17,7 @@ def add_review(result:bool):
     collection = get_collection()
     history = get_review()
     if result: 
-        collection.update_one({'_id':history.get('_id')}, {'$inc':{'yes':history.get('yes')+1}})
+        collection.update_one({'_id':history.get('_id')}, {'$inc':{'yes':1}})
     else:
-        collection.update_one({'_id':history.get('_id')}, {'$inc':{'no':history.get('no')+1}})
+        collection.update_one({'_id':history.get('_id')}, {'$inc':{'no':1}})
     
