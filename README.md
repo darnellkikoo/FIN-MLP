@@ -32,4 +32,4 @@
 
 5. Run the web application by typing ```streamlit run main.py```
 
-<b>Deployed Website [Click Here](https://darnellkikoo-fin-mlp-main-63btbv.streamlit.app/)<b>
+<b>Deployed Website [Click Here](https://darnell-plane-prediction.streamlit.app/)<b>
